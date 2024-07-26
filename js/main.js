@@ -1,7 +1,6 @@
 import Game from './Model/Game.js';
 let game = null;
 
-window.Telegram.WebApp.close();
 $('body').on('mousedown', ".block", function(e){
     game.select(this, e);
 });
