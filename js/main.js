@@ -39,7 +39,7 @@ $('body').on('touchstart', ".block", function(e){
     game.select(this, e.originalEvent.touches[0]);
 });
 
-$('body').on('touchstart', ".start", function(e){
+$('body').on('click', ".start", function(e){
     if (game != null) {
         game.stop_timer();
     }
