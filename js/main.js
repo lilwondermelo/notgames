@@ -52,3 +52,15 @@ console.log(window.Telegram.WebApp);
 window.Telegram.WebApp.disableVerticalSwipes();
 
 
+// Prevent windwo.scrollY from becoming zero
+function preventCollapse(event) {
+    if (window.scrollY === 0) {
+      window.scrollTo(0, 1);
+    }
+  }
+  
+  // Attach the above function to the touchstart event handler of the scrollable element
+  const scrollableElement = document.querySelector('body');
+  scrollableElement.addEventListener("touchstart", preventCollapse);
+
+
