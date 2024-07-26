@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    
+}
+
+
+body {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow {
+    top: 20vw;
+    left: 60vw;
+    width: 5vw;
+    height: 10vw;
+    background: url("../media/arrow.svg");
+    position: absolute;
+}
+
+
+
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    height: 60vw;
+    width: 60vw;
+    background: url("../media/bgr.svg");
+    background-size: cover;
+}
+
+.block.hor {
+    background-image: url("../media/candle_green.svg");
+}
+
+
+.block.vert {
+    background-image: url("../media/candle_red.svg");
+}
+
+.block.hor.key {
+    background-image: url("../media/key.png");
+}
+
+.block.hor.long {
+    background-image: url("../media/candle_green_long.svg");
+}
+
+
+.block.vert.long {
+    background-image: url("../media/candle_red_long.svg");
+}
+
+
+.block {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    background-size: cover;
+}
+
+
+
+.button, .timer {
+    background-color: grey;
+    border-radius: 2vw;
+    font-size: 3vw;
+    padding: 2vw 5vw;
+    width: fit-content;
+    color: white;
+    margin:5vw auto;
+}
+
+
+.timer.active, .button {
+    background-color: #6064F6;
+}
+
+.timer.win {
+    background-color: green;
+}
