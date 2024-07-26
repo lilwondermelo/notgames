@@ -1,6 +1,6 @@
 import Game from './Model/Game.js';
 let game = null;
-window.Telegram.WebApp.disableVerticalSwipes();
+
 window.Telegram.WebApp.close();
 $('body').on('mousedown', ".block", function(e){
     game.select(this, e);
@@ -47,6 +47,9 @@ $('body').on('click', ".start", function(e){
     game = new Game(6, 6);
     game.start_timer();
 });
-
+console.log(window);
+console.log(window.Telegram);
+console.log(window.Telegram.WebApp);
+window.Telegram.WebApp.disableVerticalSwipes();
 
 
