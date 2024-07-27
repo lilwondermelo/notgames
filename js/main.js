@@ -53,7 +53,17 @@ $('body').on('click', ".start", function(e){
     game = new Game(6, 6);
     game.start_timer();
 });
-window.Telegram.WebApp.isClosingConfirmationEnabled = true;
 
+
+const overflow = 100
+document.body.style.overflowY = 'hidden'
+document.body.style.marginTop = `${overflow}px`
+document.body.style.height = window.innerHeight + overflow + "px"
+document.body.style.paddingBottom = `${overflow}px`
+window.scrollTo(0, overflow)
+
+const app = window.Telegram.WebApp;
+app.ready()
+app.isClosingConfirmationEnabled = true;
 
 
