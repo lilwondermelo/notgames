@@ -1,10 +1,6 @@
 import Game from './Model/Game.js';
 let game = null;
 
-$('body').on('mousedown', ".block", function(e){
-    e.stopPropagation();
-    game.select(this, e);
-});
 
 $('body').on('mouseup', "*", function(){
     e.stopPropagation();
@@ -57,18 +53,7 @@ $('body').on('click', ".start", function(e){
     game = new Game(6, 6);
     game.start_timer();
 });
-window.Telegram.WebApp.disableVerticalSwipes();
+window.Telegram.WebApp.isClosingConfirmationEnabled = true;
 
-
-// Prevent windwo.scrollY from becoming zero
-function preventCollapse(event) {
-    if (window.scrollY === 0) {
-      window.scrollTo(0, 1);
-    }
-  } 
-  
-  // Attach the above function to the touchstart event handler of the scrollable element
-  const scrollableElement = document.querySelector('body');
-  scrollableElement.addEventListener("touchstart", preventCollapse);
 
 
